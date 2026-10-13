@@ -1,2 +1,4 @@
 name: gurado/webconnect
-title: gurado WebConnect
+label: 'gurado WebConnect'
+dependencies:
+  - typo3/fluid-styled-content
