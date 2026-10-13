@@ -15,7 +15,11 @@
   },
   "extra": {
     "typo3/cms": {
-      "extension-key": "gurado_webconnect"
+      "extension-key": "gurado_webconnect",
+      "version": "0.1.0",
+      "Package": {
+        "providesPackages": {}
+      }
     }
   }
 }
