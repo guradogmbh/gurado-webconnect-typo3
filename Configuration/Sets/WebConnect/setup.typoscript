@@ -1,0 +1,9 @@
+lib.contentElement.templateRootPaths.200 = EXT:gurado_webconnect/Resources/Private/Templates/ContentElements/
+
+tt_content.gurado_webconnect =< lib.contentElement
+tt_content.gurado_webconnect {
+  templateName = WebConnect
+  dataProcessing {
+    10 = Gurado\Webconnect\DataProcessing\WidgetProcessor
+  }
+}
