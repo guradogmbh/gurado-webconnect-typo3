@@ -7,5 +7,10 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'info@gurado.de',
     'state' => 'beta',
     'version' => '0.1.0',
-    'constraints' => ['depends' => ['typo3' => '13.4.0-13.4.99', 'fluid_styled_content' => '13.4.0-13.4.99']],
+    'constraints' => [
+        'depends' => [
+            'typo3' => '13.4.0-14.99.99',
+            'fluid_styled_content' => '13.4.0-14.99.99',
+        ],
+    ],
 ];
