@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gift box">
+  <rect x="6" y="24" width="52" height="11" rx="2" fill="#1AAED1"/>
+  <rect x="10" y="36" width="44" height="23" rx="2" fill="#1AAED1"/>
+  <path d="M29 24c-8-1-14-6-13-12 1-5 7-6 11-2 3 3 5 8 5 14M35 24c8-1 14-6 13-12-1-5-7-6-11-2-3 3-5 8-5 14" fill="none" stroke="#F6A51A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M29 24h6v35h-6z" fill="#F6A51A"/>
+  <path d="M6 24h52v5H6z" fill="#3AC4DF" opacity=".55"/>
+</svg>
