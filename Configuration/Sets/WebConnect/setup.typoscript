@@ -7,3 +7,8 @@ tt_content.gurado_webconnect {
     10 = Gurado\Webconnect\DataProcessing\WidgetProcessor
   }
 }
+
+# Global floating widget is configured exclusively through site settings.
+# Using PAGE.footerData ensures a single site-wide output instead of a content element.
+page.footerData.1998 = USER
+page.footerData.1998.userFunc = Gurado\Webconnect\Rendering\GlobalBubble->render
