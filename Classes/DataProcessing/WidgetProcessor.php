@@ -19,6 +19,12 @@ final class WidgetProcessor implements DataProcessorInterface
             return $processedData;
         }
         $mode = in_array($data['tx_gurado_mode'] ?? '', ['bubble', 'embedded'], true) ? $data['tx_gurado_mode'] : 'embedded';
+        // Since v0.2, Bubble Mode is exclusive to site settings.
+        // Suppress any previously created Bubble content elements.
+        if ($mode === 'bubble') {
+            $processedData['widgetHtml'] = '';
+            return $processedData;
+        }
         $page = in_array($data['tx_gurado_page'] ?? '', ['product', 'products', 'categories', 'cart', 'checkout'], true) ? $data['tx_gurado_page'] : '';
         $attrs = ['shop' => $shop, 'mode' => $mode];
         if ($page !== '') { $attrs['page'] = $page; }
