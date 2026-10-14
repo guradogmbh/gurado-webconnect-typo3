@@ -15,6 +15,22 @@ settings:
     category: gurado
     type: bool
     default: false
+  gurado.webconnect.page:
+    label: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:bubbleView'
+    description: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:bubbleViewDesc'
+    category: gurado
+    type: string
+    default: ''
+    enum:
+      '': 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:bubbleDefault'
+      products: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:bubbleArticles'
+      product: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:bubbleArticle'
+  gurado.webconnect.product:
+    label: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:bubbleArticleId'
+    description: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:bubbleArticleIdDesc'
+    category: gurado
+    type: int
+    default: 0
   gurado.webconnect.align:
     label: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:align'
     category: gurado
