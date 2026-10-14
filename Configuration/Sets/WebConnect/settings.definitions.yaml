@@ -4,8 +4,8 @@ categories:
 
 settings:
   gurado.webconnect.shop:
-    label: 'Shop identifier'
-    description: 'Shop identifier for the site-wide floating widget.'
+    label: 'Storecode'
+    description: 'Storecode for the site-wide floating widget.'
     category: gurado
     type: string
     default: ''
