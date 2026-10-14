@@ -1,28 +1,35 @@
-# gurado WebConnect for TYPO3 (starter)
+# gurado WebConnect for TYPO3 (v0.2 development)
 
-Initial implementation scaffold for TYPO3 **13.4 LTS** (not yet validated in a running TYPO3 installation).
+Development implementation for TYPO3 13.4 and 14.x. **Test in staging before production.**
 
-## Features implemented
-- Custom TYPO3 content element `gurado_webconnect`
-- Shop ID, Bubble/Embedded, page and product selection, alignment and offsets
-- Escaped HTML attributes and parameter allowlists
-- WebConnect CDN JavaScript registered through TYPO3 AssetCollector
-- JavaScript registration reused across multiple content elements
+## Global Bubble Mode (Site Settings only)
 
-## Installation and testing
-1. Install as Composer package or place in a local extensions directory.
-2. Run TYPO3 database schema updates.
-3. Activate the **gurado WebConnect** site set in the TYPO3 site configuration, with `fluid_styled_content` included.
-4. Add the **gurado WebConnect** content element to a page and enter a real shop identifier.
-5. Check both Bubble and Embedded, different page modes, multiple widgets and frontend JS console.
+1. Activate the **gurado WebConnect** site set in **Sites → Setup**.
+2. Open **Edit site settings** and locate **gurado WebConnect**.
+3. Enter the **Shop identifier**, enable **floating widget**, and optionally set alignment and offsets.
+4. Save, clear TYPO3 caches and load a frontend page. Global Bubble is added through `page.footerData.1998`.
+5. The setting is per TYPO3 site. Bubble is disabled by default and is only rendered with a nonempty Shop ID.
 
-## Before production / release
-- Run actual TYPO3 13.4 installation tests and PHP static analysis.
-- Add localized German and English field labels.
-- Add a global Bubble integration through site settings (not included in this starter).
-- Confirm offset formats against the current WebConnect runtime.
-- Test consent/CSP handling and accessibility with real TYPO3 installations.
-- Verify composer dependencies, site set precedence, frontend caching, and TER packaging.
-- Decide license with gurado legal review.
+## Embedded shop content element
 
-Source reference: https://de.wordpress.org/plugins/gurado-webconnect/ and user-supplied WordPress / Contao source archives.
+Insert **gurado WebConnect** as a content element. Enter the Shop ID and optionally the page/product selection. The content element is for Embedded Mode only. Previously created Bubble content elements are intentionally suppressed to avoid duplicate floating widgets.
+
+The script URL is `https://statics.gurado.de/widget/assets/widget.js` and is registered with the same AssetCollector key for both modes.
+
+## Update
+
+```bash
+composer update gurado/typo3-webconnect -W
+./vendor/bin/typo3 cache:flush
+```
+
+## Validation checklist
+
+- Check Bubble on a normal page, a page without other elements and a cached response.
+- Disable Bubble and confirm it disappears.
+- Test an embedded shop and global Bubble together, ensuring only one JS asset.
+- Test multiple sites and German/English frontend pages.
+- Verify CSP/consent settings, HTML escaping and frontend console.
+- Run TYPO3 13.4 and 14.3 integration tests before release.
+
+The extension is not yet published in TER. Global Bubble has not yet been validated on the user's TYPO3 runtime.
