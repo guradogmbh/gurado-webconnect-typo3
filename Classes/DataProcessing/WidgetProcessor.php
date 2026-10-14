@@ -25,7 +25,7 @@ final class WidgetProcessor implements DataProcessorInterface
             $processedData['widgetHtml'] = '';
             return $processedData;
         }
-        $page = in_array($data['tx_gurado_page'] ?? '', ['product', 'products', 'categories', 'cart', 'checkout'], true) ? $data['tx_gurado_page'] : '';
+        $page = in_array($data['tx_gurado_page'] ?? '', ['product', 'products', 'categories'], true) ? $data['tx_gurado_page'] : 'products';
         $attrs = ['shop' => $shop, 'mode' => $mode];
         if ($page !== '') { $attrs['page'] = $page; }
         if ($page === 'product' && (int)($data['tx_gurado_product'] ?? 0) > 0) { $attrs['product'] = (string)(int)$data['tx_gurado_product']; }
