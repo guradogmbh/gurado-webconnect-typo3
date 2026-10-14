@@ -31,6 +31,19 @@ final class GlobalBubble
             $align = 'right';
         }
         $attributes = ['shop' => $shop, 'mode' => 'bubble', 'align' => $align];
+        $page = (string)$settings->get('gurado.webconnect.page', '');
+        if (in_array($page, ['products', 'product'], true)) {
+            $attributes['page'] = $page;
+            if ($page === 'product') {
+                $articleId = (int)$settings->get('gurado.webconnect.product', 0);
+                if ($articleId > 0) {
+                    $attributes['product'] = (string)$articleId;
+                } else {
+                    // A missing article ID must not open an invalid product detail.
+                    $attributes['page'] = 'products';
+                }
+            }
+        }
         foreach (['offsetX', 'offsetY'] as $attribute) {
             $value = trim((string)$settings->get('gurado.webconnect.' . $attribute, ''));
             if ($value !== '' && preg_match('/^-?\d+(?:\.\d+)?(?:px|rem|em|%|vh|vw)?$/', $value)) {
