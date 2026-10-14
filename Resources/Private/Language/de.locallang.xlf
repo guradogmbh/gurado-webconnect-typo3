@@ -18,4 +18,11 @@
 <trans-unit id="offsetX"><source>Horizontal offset</source><target>Horizontaler Abstand</target></trans-unit>
 <trans-unit id="offsetY"><source>Vertical offset</source><target>Vertikaler Abstand</target></trans-unit>
 <trans-unit id="offsetDesc"><source>Optional CSS length such as 20px.</source><target>Optionaler CSS-Abstand, zum Beispiel 20px.</target></trans-unit>
+<trans-unit id="bubbleView"><source>Bubble start view</source><target>Bubble-Startansicht</target></trans-unit>
+<trans-unit id="bubbleViewDesc"><source>Choose the first view when the floating widget is opened.</source><target>Legt fest, welche Ansicht beim Öffnen des Bubble Mode zuerst erscheint.</target></trans-unit>
+<trans-unit id="bubbleDefault"><source>Default - Welcome screen</source><target>Default - Startbildschirm</target></trans-unit>
+<trans-unit id="bubbleArticles"><source>Articles - Article listing</source><target>Artikel - Artikelübersicht</target></trans-unit>
+<trans-unit id="bubbleArticle"><source>Article - Single article</source><target>Artikel - Einzelner Artikel</target></trans-unit>
+<trans-unit id="bubbleArticleId"><source>Article ID</source><target>Artikel-ID</target></trans-unit>
+<trans-unit id="bubbleArticleIdDesc"><source>Used when the Bubble start view is Article.</source><target>Wird verwendet, wenn als Bubble-Startansicht Artikel gewählt wurde.</target></trans-unit>
 </body></file></xliff>
