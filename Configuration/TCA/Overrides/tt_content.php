@@ -15,7 +15,7 @@ $fields = [
     'tx_gurado_offset_y' => ['label' => 'Bubble vertical offset', 'config' => ['type' => 'input', 'max' => 24]],
 ];
 ExtensionManagementUtility::addTCAcolumns('tt_content', $fields);
-ExtensionManagementUtility::addTcaSelectItem('tt_content', 'CType', ['label' => 'gurado WebConnect', 'value' => 'gurado_webconnect', 'group' => 'default'], 'textmedia', 'after');
+ExtensionManagementUtility::addTcaSelectItem('tt_content', 'CType', ['label' => 'gurado WebConnect', 'value' => 'gurado_webconnect', 'group' => 'default', 'icon' => 'gurado-webconnect'], 'textmedia', 'after');
 $GLOBALS['TCA']['tt_content']['types']['gurado_webconnect'] = [
     'showitem' => '--palette--;;general,header,tx_gurado_shop,tx_gurado_page,tx_gurado_product',
 ];
