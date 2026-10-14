@@ -1,4 +1,6 @@
-# gurado WebConnect for TYPO3 (v0.2 development)
+# gurado WebConnect for TYPO3
+
+![gurado logo](Documentation/Images/gurado-logo.svg)
 
 Development implementation for TYPO3 13.4 and 14.x. **Test in staging before production.**
 
