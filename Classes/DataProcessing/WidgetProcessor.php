@@ -4,13 +4,12 @@ declare(strict_types=1);
 namespace Gurado\Webconnect\DataProcessing;
 
 use TYPO3\CMS\Core\Page\AssetCollector;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
 final class WidgetProcessor implements DataProcessorInterface
 {
-    public function __construct(private readonly AssetCollector $assets) {}
-
     public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData): array
     {
         $data = $processedData['data'] ?? [];
@@ -34,7 +33,7 @@ final class WidgetProcessor implements DataProcessorInterface
         $pairs = [];
         foreach ($attrs as $key => $value) { $pairs[] = $key . '="' . htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . '"'; }
         $processedData['widgetHtml'] = '<gurado-widget ' . implode(' ', $pairs) . '></gurado-widget>';
-        $this->assets->addJavaScript('gurado-webconnect-widget', 'https://statics.gurado.de/widget/assets/widget.js', ['type' => 'text/javascript'], ['external' => true]);
+        GeneralUtility::makeInstance(AssetCollector::class)->addJavaScript('gurado-webconnect-widget', 'https://statics.gurado.de/widget/assets/widget.js', ['type' => 'text/javascript'], ['external' => true]);
         return $processedData;
     }
 }
