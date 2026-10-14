@@ -19,20 +19,20 @@ final class GlobalBubble
         }
 
         $settings = $site->getSettings();
-        if (!(bool)$settings->get('gurado.webconnect.bubble.enabled', false)) {
+        if (!(bool)$settings->get('gurado.webconnect.bubbleEnabled', false)) {
             return '';
         }
-        $shop = trim((string)$settings->get('gurado.webconnect.bubble.shop', ''));
+        $shop = trim((string)$settings->get('gurado.webconnect.shop', ''));
         if ($shop === '') {
             return '';
         }
-        $align = (string)$settings->get('gurado.webconnect.bubble.align', 'right');
+        $align = (string)$settings->get('gurado.webconnect.align', 'right');
         if (!in_array($align, ['left', 'right'], true)) {
             $align = 'right';
         }
         $attributes = ['shop' => $shop, 'mode' => 'bubble', 'align' => $align];
         foreach (['offsetX', 'offsetY'] as $attribute) {
-            $value = trim((string)$settings->get('gurado.webconnect.bubble.' . $attribute, ''));
+            $value = trim((string)$settings->get('gurado.webconnect.' . $attribute, ''));
             if ($value !== '' && preg_match('/^-?\d+(?:\.\d+)?(?:px|rem|em|%|vh|vw)?$/', $value)) {
                 $attributes[$attribute] = $value;
             }
