@@ -1,11 +1,10 @@
 # gurado WebConnect – brand assets
 
-- **TYPO3 extension and content element icon:** `Resources/Public/Icons/Extension.svg` (gift box only, square SVG).
-- **Documentation and promotional pages:** full official gurado logo (gift symbol + `gurado` wordmark).
-- Use the original gurado brand master artwork for the full logo. **Do not create a new wordmark or stretch an icon.**
+![Official gurado logo](Images/gurado-logo.svg)
 
-## Pending brand asset
+The following **original, unmodified gurado brand SVG files** are used:
 
-Place an approved vector wordmark at `Documentation/Images/gurado-logo.svg` once supplied by gurado. The README currently uses a text title rather than an invented/reconstructed logo.
+- **TYPO3 extension and content-element icon:** `Resources/Public/Icons/Extension.svg` – the official gift-only logo (`gurado-geschenk-logo_svg.svg`).
+- **Documentation and README:** `Documentation/Images/gurado-logo.svg` – the official full gurado wordmark and symbol (`gurado-logo_svg.svg`).
 
-Use sufficient contrast on light and dark backgrounds and test the square icon at 16, 32, and 64 pixels.
+Do not recreate, recolor or stretch these assets. Test icon legibility at small sizes in TYPO3.
