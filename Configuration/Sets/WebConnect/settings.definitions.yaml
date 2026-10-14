@@ -1,0 +1,37 @@
+categories:
+  gurado:
+    label: 'gurado WebConnect'
+
+settings:
+  gurado.webconnect.shop:
+    label: 'Shop identifier'
+    description: 'Shop identifier for the site-wide floating widget.'
+    category: gurado
+    type: string
+    default: ''
+  gurado.webconnect.bubbleEnabled:
+    label: 'Enable floating widget'
+    description: 'Display one floating gurado widget on all frontend pages of this site.'
+    category: gurado
+    type: bool
+    default: false
+  gurado.webconnect.align:
+    label: 'Bubble position'
+    category: gurado
+    type: string
+    default: 'right'
+    enum:
+      left: 'Left'
+      right: 'Right'
+  gurado.webconnect.offsetX:
+    label: 'Horizontal offset'
+    description: 'Optional CSS length such as 20px.'
+    category: gurado
+    type: string
+    default: ''
+  gurado.webconnect.offsetY:
+    label: 'Vertical offset'
+    description: 'Optional CSS length such as 20px.'
+    category: gurado
+    type: string
+    default: ''
