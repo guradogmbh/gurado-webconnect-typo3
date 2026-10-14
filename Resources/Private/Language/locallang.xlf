@@ -2,17 +2,17 @@
 <xliff version="1.2"><file source-language="en" datatype="plaintext" original="messages"><body>
 <trans-unit id="storecode"><source>Storecode</source></trans-unit>
 <trans-unit id="mode"><source>Display mode</source></trans-unit>
-<trans-unit id="embedded"><source>Embedded</source></trans-unit>
+<trans-unit id="embedded"><source>Embed Mode</source></trans-unit>
 <trans-unit id="page"><source>Content to display</source></trans-unit>
-<trans-unit id="products"><source>Products</source></trans-unit>
+<trans-unit id="products"><source>Articles</source></trans-unit>
 <trans-unit id="categories"><source>Categories</source></trans-unit>
-<trans-unit id="product"><source>Single product</source></trans-unit>
-<trans-unit id="productId"><source>Product ID (single product only)</source></trans-unit>
+<trans-unit id="product"><source>Single article</source></trans-unit>
+<trans-unit id="productId"><source>Article ID (single article only)</source></trans-unit>
 <trans-unit id="left"><source>Left</source></trans-unit>
 <trans-unit id="right"><source>Right</source></trans-unit>
 <trans-unit id="extension"><source>gurado WebConnect</source></trans-unit>
 <trans-unit id="settingsShopDesc"><source>Storecode for the site-wide floating widget.</source></trans-unit>
-<trans-unit id="bubbleEnabled"><source>Enable floating widget</source></trans-unit>
+<trans-unit id="bubbleEnabled"><source>Enable Bubble Mode</source></trans-unit>
 <trans-unit id="bubbleDesc"><source>Display one floating gurado widget on all frontend pages of this site.</source></trans-unit>
 <trans-unit id="align"><source>Bubble position</source></trans-unit>
 <trans-unit id="offsetX"><source>Horizontal offset</source></trans-unit>
