@@ -6,7 +6,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 defined('TYPO3') or die();
 
 $fields = [
-    'tx_gurado_shop' => ['label' => 'Shop identifier', 'config' => ['type' => 'input', 'required' => true, 'max' => 255]],
+    'tx_gurado_shop' => ['label' => 'Storecode', 'config' => ['type' => 'input', 'required' => true, 'max' => 255]],
     'tx_gurado_mode' => ['label' => 'Display mode', 'config' => ['type' => 'select', 'renderType' => 'selectSingle', 'items' => [['label' => 'Embedded', 'value' => 'embedded']], 'default' => 'embedded']],
     'tx_gurado_page' => ['label' => 'Initial page', 'config' => ['type' => 'select', 'renderType' => 'selectSingle', 'items' => [['label' => 'Default', 'value' => ''], ['label' => 'Products', 'value' => 'products'], ['label' => 'Categories', 'value' => 'categories'], ['label' => 'Product', 'value' => 'product'], ['label' => 'Cart', 'value' => 'cart'], ['label' => 'Checkout', 'value' => 'checkout']]]],
     'tx_gurado_product' => ['label' => 'Product ID (product page only)', 'config' => ['type' => 'number', 'default' => 0, 'range' => ['lower' => 0]]],
