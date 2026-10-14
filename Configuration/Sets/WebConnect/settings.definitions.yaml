@@ -4,34 +4,34 @@ categories:
 
 settings:
   gurado.webconnect.shop:
-    label: 'Storecode'
-    description: 'Storecode for the site-wide floating widget.'
+    label: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:storecode'
+    description: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:settingsShopDesc'
     category: gurado
     type: string
     default: ''
   gurado.webconnect.bubbleEnabled:
-    label: 'Enable floating widget'
-    description: 'Display one floating gurado widget on all frontend pages of this site.'
+    label: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:bubbleEnabled'
+    description: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:bubbleDesc'
     category: gurado
     type: bool
     default: false
   gurado.webconnect.align:
-    label: 'Bubble position'
+    label: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:align'
     category: gurado
     type: string
     default: 'right'
     enum:
-      left: 'Left'
-      right: 'Right'
+      left: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:left'
+      right: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:right'
   gurado.webconnect.offsetX:
-    label: 'Horizontal offset'
-    description: 'Optional CSS length such as 20px.'
+    label: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:offsetX'
+    description: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:offsetDesc'
     category: gurado
     type: string
     default: ''
   gurado.webconnect.offsetY:
-    label: 'Vertical offset'
-    description: 'Optional CSS length such as 20px.'
+    label: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:offsetY'
+    description: 'LLL:EXT:gurado_webconnect/Resources/Private/Language/locallang.xlf:offsetDesc'
     category: gurado
     type: string
     default: ''
