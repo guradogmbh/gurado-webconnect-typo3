@@ -1,0 +1,36 @@
+name: Publish v1.0.0 GitHub Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-v1.yml
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out release source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify release metadata
+        run: |
+          php -r '$c=json_decode(file_get_contents("composer.json"), true); if (($c["extra"]["typo3/cms"]["version"] ?? "") !== "1.0.0") exit(1);'
+          php -r '$x=file_get_contents("ext_emconf.php"); if (!str_contains($x, "\x27version\x27 => \x271.0.0\x27") || !str_contains($x, "\x27state\x27 => \x27stable\x27")) exit(1);'
+      - name: Create public GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if gh release view v1.0.0 >/dev/null 2>&1; then
+            echo "Release v1.0.0 already exists; leaving it unchanged."
+            exit 0
+          fi
+          gh release create v1.0.0 --target "$GITHUB_SHA" \
+            --title "gurado WebConnect 1.0.0" \
+            --notes-file CHANGELOG.md \
+            --latest
