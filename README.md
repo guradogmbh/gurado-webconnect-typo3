@@ -1,37 +1,37 @@
 # gurado WebConnect for TYPO3
 
-![gurado logo](Documentation/Images/gurado-logo.svg)
+![Official gurado logo](Documentation/Images/gurado-logo.svg)
 
-Development implementation for TYPO3 13.4 and 14.x. **Test in staging before production.**
+**Sell gift vouchers from your TYPO3 website with gurado — no paid subscription required to get started.**
 
-## Global Bubble Mode (Site Settings only)
+gurado is a cloud-based voucher management platform covering online sales, in-store redemption, and reporting for finance and accounting teams. WebConnect embeds your gurado voucher shop into TYPO3 without rebuilding the voucher checkout.
 
-1. Activate the **gurado WebConnect** site set in **Sites → Setup**.
-2. Open **Edit site settings** and locate **gurado WebConnect**.
-3. Enter the **Shop identifier**, enable **floating widget**, and optionally set alignment and offsets.
-4. Save, clear TYPO3 caches and load a frontend page. Global Bubble is added through `page.footerData.1998`.
-5. The setting is per TYPO3 site. Bubble is disabled by default and is only rendered with a nonempty Shop ID.
+- **Free:** sell vouchers with payment by invoice/bank transfer to your own bank account, with up to **10 voucher redemptions in a 30-day period**.
+- **Paid plans:** supported automated payment integrations such as PayPal, Stripe, Worldline, Nexi, hobex and Mollie; physical gift-card printing and delivery by gurado. Provider and fulfilment fees may apply.
+- **Embed Mode:** article listing, categories or one specific article inside a TYPO3 page.
+- **Bubble Mode:** floating voucher shop enabled once per TYPO3 site, with Default welcome screen, Articles or direct Article starting view.
 
-## Embedded shop content element
+## Installation (GitHub development branch)
 
-Insert **gurado WebConnect** as a content element. Enter the Shop ID and optionally the page/product selection. The content element is for Embedded Mode only. Previously created Bubble content elements are intentionally suppressed to avoid duplicate floating widgets.
-
-The script URL is `https://statics.gurado.de/widget/assets/widget.js` and is registered with the same AssetCollector key for both modes.
-
-## Update
+The extension is currently under development and has been tested by the project on TYPO3 14.3.6. Test changes on staging before production.
 
 ```bash
-composer update gurado/typo3-webconnect -W
+composer config repositories.gurado-webconnect vcs https://github.com/guradogmbh/gurado-webconnect-typo3.git
+composer require "gurado/typo3-webconnect:dev-feature/initial-typo3-extension" -W
+./vendor/bin/typo3 extension:setup
 ./vendor/bin/typo3 cache:flush
 ```
 
-## Validation checklist
+Enable the **gurado WebConnect** site set in TYPO3 site management. In Site Settings, enter your **Storecode** and enable Bubble Mode if desired. For Embed Mode, add a **gurado WebConnect** content element to a page.
 
-- Check Bubble on a normal page, a page without other elements and a cached response.
-- Disable Bubble and confirm it disappears.
-- Test an embedded shop and global Bubble together, ensuring only one JS asset.
-- Test multiple sites and German/English frontend pages.
-- Verify CSP/consent settings, HTML escaping and frontend console.
-- Run TYPO3 13.4 and 14.3 integration tests before release.
+## Full documentation
 
-The extension is not yet published in TER. Global Bubble has not yet been validated on the user's TYPO3 runtime.
+Start with [the complete installation and user guide](Documentation/Index.rst), including free and paid plans, supported views, in-store redemption, accounting reports and troubleshooting.
+
+## Support
+
+- [gurado website](https://www.gurado.de)
+- [gurado support](https://support.gurado.de)
+- [Extension issues](https://github.com/guradogmbh/gurado-webconnect-typo3/issues)
+
+**Release status:** Development; not yet published in TYPO3 Extension Repository. Do not disable Composer security advisory protections to force package installation.
