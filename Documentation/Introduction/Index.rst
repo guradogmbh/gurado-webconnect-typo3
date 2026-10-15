@@ -57,4 +57,6 @@ Hotels, restaurants, retail stores, wellness and leisure businesses,
 experience providers and multi-location organizations can all integrate
 a gurado voucher shop into their TYPO3 website.
 
+`Create your free gurado account <https://dashboard.gurado.de/register>`_ to get started.
+
 Visit https://www.gurado.de or https://support.gurado.de for more information.
