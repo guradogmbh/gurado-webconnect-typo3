@@ -24,7 +24,8 @@ How gift vouchers work
 Free plan: no subscription required
 ===================================
 
-You can start selling vouchers with gurado without a paid subscription:
+You can start selling vouchers and integrate WebConnect with TYPO3 using
+gurado's Free plan, without a paid subscription:
 
 * Accept **invoice/bank transfer payment directly to your own bank account**.
 * Sell digital gift vouchers through your online shop.
