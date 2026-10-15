@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guides xmlns="https://www.phpdoc.org/guides"
+        links-are-relative="true"
+        default-code-language="bash">
+    <extension class="\T3Docs\Typo3DocsTheme\DependencyInjection\Typo3DocsThemeExtension"
+               project-home="https://www.gurado.de"
+               project-repository="https://github.com/guradogmbh/gurado-webconnect-typo3"
+               project-issues="https://github.com/guradogmbh/gurado-webconnect-typo3/issues"
+               edit-on-github="guradogmbh/gurado-webconnect-typo3"
+               edit-on-github-branch="main"
+               typo3-core-preferred="14.3"
+    />
+    <project title="gurado WebConnect for TYPO3"
+             version="local"
+             copyright="gurado GmbH" />
+</guides>
