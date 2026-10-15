@@ -32,5 +32,5 @@ gift-card fulfilment (additional provider/printing/shipping costs may apply).
     Troubleshooting/Index
 
 ..  note::
-    This manual describes the current development version. Test the
-    extension in a staging TYPO3 installation before production.
+    This manual covers the stable 1.0 release of gurado WebConnect.
+    Validate configuration on a staging TYPO3 installation before production.
