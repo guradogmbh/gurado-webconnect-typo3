@@ -15,7 +15,7 @@ transaction reporting independently of TYPO3.
 Use **Embed Mode** for a shop displayed inside a page or **Bubble Mode**
 for a floating shop configured once per TYPO3 site.
 
-The gurado Free plan does not require a paid subscription. Payment by
+The gurado Free plan and its TYPO3 WebConnect integration do not require a paid subscription. Payment by
 invoice/bank transfer to your own bank account and in-store redemption
 are supported, subject to **a maximum of 10 redemptions per 30-day period**.
 Paid plans offer automated payment provider integrations and physical
