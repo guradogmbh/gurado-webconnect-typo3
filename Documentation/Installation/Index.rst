@@ -11,6 +11,15 @@ Requirements
 * A gurado account and an activated voucher shop with a **Storecode**.
 * The **fluid_styled_content** system extension and an active site configuration.
 
+Create your gurado account
+==========================
+
+If you do not already have a gurado account, `register for free <https://dashboard.gurado.de/register>`_.
+Create and configure your voucher shop in the gurado Dashboard and obtain its
+**Storecode** before connecting it to TYPO3. Registration for the gurado Free
+plan does not require a paid subscription. TYPO3 integration availability
+may depend on the selected gurado plan.
+
 Composer installation from GitHub (development)
 ==============================================
 
