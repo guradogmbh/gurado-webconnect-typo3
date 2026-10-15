@@ -11,6 +11,10 @@ gurado is a cloud-based voucher management platform covering online sales, in-st
 - **Embed Mode:** article listing, categories or one specific article inside a TYPO3 page.
 - **Bubble Mode:** floating voucher shop enabled once per TYPO3 site, with Default welcome screen, Articles or direct Article starting view.
 
+## Create your free gurado account
+
+**[Sign up for a free gurado account](https://dashboard.gurado.de/register)** to create and configure your voucher shop. You will need its **Storecode** to connect WebConnect to TYPO3. The free gurado account requires no paid subscription; availability of TYPO3 integration depends on the selected gurado plan.
+
 ## Installation (GitHub development branch)
 
 The extension is currently under development and has been tested by the project on TYPO3 14.3.6. Test changes on staging before production.
