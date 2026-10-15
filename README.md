@@ -13,7 +13,7 @@ gurado is a cloud-based voucher management platform covering online sales, in-st
 
 ## Create your free gurado account
 
-**[Sign up for a free gurado account](https://dashboard.gurado.de/register)** to create and configure your voucher shop. You will need its **Storecode** to connect WebConnect to TYPO3. The free gurado account requires no paid subscription; availability of TYPO3 integration depends on the selected gurado plan.
+**[Sign up for a free gurado account](https://dashboard.gurado.de/register)** to create and configure your voucher shop. You will need its **Storecode** to connect WebConnect to TYPO3. Both the gurado Free plan and the TYPO3 WebConnect extension can be used without a paid subscription. The Free plan allows up to 10 voucher redemptions in a 30-day period.
 
 ## Installation (GitHub development branch)
 
