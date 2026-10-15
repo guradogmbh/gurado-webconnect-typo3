@@ -1,0 +1,25 @@
+{
+  "name": "gurado/typo3-webconnect",
+  "description": "gurado WebConnect - Embed the gurado gift voucher shop in TYPO3.",
+  "type": "typo3-cms-extension",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": "^8.2",
+    "typo3/cms-core": "^13.4 || ^14.0",
+    "typo3/cms-fluid-styled-content": "^13.4 || ^14.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gurado\\Webconnect\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "gurado_webconnect",
+      "version": "1.0.0",
+      "Package": {
+        "providesPackages": {}
+      }
+    }
+  }
+}

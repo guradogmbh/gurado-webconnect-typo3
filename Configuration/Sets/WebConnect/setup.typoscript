@@ -1,0 +1,14 @@
+lib.contentElement.templateRootPaths.200 = EXT:gurado_webconnect/Resources/Private/Templates/ContentElements/
+
+tt_content.gurado_webconnect =< lib.contentElement
+tt_content.gurado_webconnect {
+  templateName = WebConnect
+  dataProcessing {
+    10 = Gurado\Webconnect\DataProcessing\WidgetProcessor
+  }
+}
+
+# Global floating widget is configured exclusively through site settings.
+# Using PAGE.footerData ensures a single site-wide output instead of a content element.
+page.footerData.1998 = USER
+page.footerData.1998.userFunc = Gurado\Webconnect\Rendering\GlobalBubble->render

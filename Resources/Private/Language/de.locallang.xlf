@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2"><file source-language="en" target-language="de" datatype="plaintext" original="messages"><body>
+<trans-unit id="storecode"><source>Storecode</source><target>Storecode</target></trans-unit>
+<trans-unit id="mode"><source>Display mode</source><target>Modus</target></trans-unit>
+<trans-unit id="embedded"><source>Embedded</source><target>Embed Mode</target></trans-unit>
+<trans-unit id="page"><source>Content to display</source><target>Anzuzeigender Inhalt</target></trans-unit>
+<trans-unit id="products"><source>Products</source><target>Artikel</target></trans-unit>
+<trans-unit id="categories"><source>Categories</source><target>Kategorien</target></trans-unit>
+<trans-unit id="product"><source>Single product</source><target>Einzelner Artikel</target></trans-unit>
+<trans-unit id="productId"><source>Product ID (single product only)</source><target>Artikel-ID (nur bei einzelnem Artikel)</target></trans-unit>
+<trans-unit id="left"><source>Left</source><target>Links</target></trans-unit>
+<trans-unit id="right"><source>Right</source><target>Rechts</target></trans-unit>
+<trans-unit id="extension"><source>gurado WebConnect</source><target>gurado WebConnect</target></trans-unit>
+<trans-unit id="settingsShopDesc"><source>Storecode for the site-wide floating widget.</source><target>Storecode für das websiteweit eingebundene Bubble-Widget.</target></trans-unit>
+<trans-unit id="bubbleEnabled"><source>Enable floating widget</source><target>Bubble Mode aktivieren</target></trans-unit>
+<trans-unit id="bubbleDesc"><source>Display one floating gurado widget on all frontend pages of this site.</source><target>Das gurado Bubble-Widget auf allen Seiten dieser Website anzeigen.</target></trans-unit>
+<trans-unit id="align"><source>Bubble position</source><target>Bubble-Position</target></trans-unit>
+<trans-unit id="offsetX"><source>Horizontal offset</source><target>Horizontaler Abstand</target></trans-unit>
+<trans-unit id="offsetY"><source>Vertical offset</source><target>Vertikaler Abstand</target></trans-unit>
+<trans-unit id="offsetDesc"><source>Optional CSS length such as 20px.</source><target>Optionaler CSS-Abstand, zum Beispiel 20px.</target></trans-unit>
+<trans-unit id="bubbleView"><source>Bubble start view</source><target>Bubble-Startansicht</target></trans-unit>
+<trans-unit id="bubbleViewDesc"><source>Choose the first view when the floating widget is opened.</source><target>Legt fest, welche Ansicht beim Öffnen des Bubble Mode zuerst erscheint.</target></trans-unit>
+<trans-unit id="bubbleDefault"><source>Default - Welcome screen</source><target>Default - Startbildschirm</target></trans-unit>
+<trans-unit id="bubbleArticles"><source>Articles - Article listing</source><target>Artikel - Artikelübersicht</target></trans-unit>
+<trans-unit id="bubbleArticle"><source>Article - Single article</source><target>Artikel - Einzelner Artikel</target></trans-unit>
+<trans-unit id="bubbleArticleId"><source>Article ID</source><target>Artikel-ID</target></trans-unit>
+<trans-unit id="bubbleArticleIdDesc"><source>Used when the Bubble start view is Article.</source><target>Wird verwendet, wenn als Bubble-Startansicht Artikel gewählt wurde.</target></trans-unit>
+</body></file></xliff>

@@ -1,0 +1,73 @@
+name: Extension quality checks
+
+on:
+  push:
+    branches:
+      - main
+      - feature/initial-typo3-extension
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  static-checks:
+    name: Static checks (PHP 8.3)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer:v2
+          coverage: none
+      - name: Validate Composer metadata
+        run: composer validate --no-check-publish
+      - name: Lint all PHP files
+        run: |
+          find Classes Configuration -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+          php -l ext_emconf.php
+      - name: Validate XML translations and documentation configuration
+        run: |
+          php -r 'foreach (glob("Resources/Private/Language/*.xlf") as $path) { if (!simplexml_load_file($path)) { exit(1); } echo "$path OK\n"; }'
+          php -r 'if (!simplexml_load_file("Documentation/guides.xml")) { exit(1); } echo "guides.xml OK\n";'
+      - name: Check documentation image references
+        run: |
+          python3 - <<'PY'
+          import pathlib, re
+          docs = pathlib.Path('Documentation')
+          missing = []
+          for rst in docs.rglob('*.rst'):
+              for rel in re.findall(r'^\s*\.\.\s+(?:image|figure)::\s+(\S+)', rst.read_text(), re.M):
+                  if not (rst.parent / rel).is_file():
+                      missing.append(str(rst) + ': ' + rel)
+          if missing:
+              raise SystemExit('Missing documentation images:\n' + '\n'.join(missing))
+          print('Documentation image references OK')
+          PY
+
+  dependency-resolution:
+    name: TYPO3 ${{ matrix.typo3 }} / PHP ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - typo3: '13.4'
+            php: '8.3'
+          - typo3: '14.3'
+            php: '8.4'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          tools: composer:v2
+          extensions: intl, mbstring, pdo_sqlite, xml, zip
+          coverage: none
+      - name: Allow the official TYPO3 Composer class alias plugin
+        run: |
+          composer config --no-plugins allow-plugins.typo3/class-alias-loader true
+          composer config --no-plugins allow-plugins.typo3/cms-composer-installers true
+      - name: Verify TYPO3 dependencies resolve
+        run: |
+          composer require --no-update --no-interaction "typo3/cms-core:^${{ matrix.typo3 }}" "typo3/cms-fluid-styled-content:^${{ matrix.typo3 }}"
+          composer update --no-scripts --no-interaction --prefer-dist --no-progress
