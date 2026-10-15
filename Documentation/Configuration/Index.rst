@@ -4,6 +4,58 @@
 Configuration
 =============
 
+Configure WebConnect in the gurado Dashboard
+============================================
+
+Before integrating WebConnect into TYPO3, create and configure the widget in
+your gurado Dashboard under **Marketing > WebConnect**. The setup wizard has
+three steps, completed in this order:
+
+Step 1: Display mode and styling
+--------------------------------
+
+Choose whether the shop should appear embedded in a page or as a floating
+Bubble. Configure the shop's color scheme, including primary color, text,
+accent and button text, and select a font family. The preview reflects your
+choices.
+
+..  figure:: ../Images/dashboard-webconnect-step1-design.png
+    :alt: gurado Dashboard WebConnect editor: display mode, colors and font
+    :width: 100%
+
+    Step 1: Select the display mode and customize colors and typography.
+
+Step 2: Articles and display options
+------------------------------------
+
+Choose the initial content: a specific article, a list of all or selected
+articles, or categories. Depending on the selected presentation, configure
+article selection, whether article images appear in listing and detail views,
+and the shop language. Save the configuration to continue.
+
+..  figure:: ../Images/dashboard-webconnect-step2-articles.png
+    :alt: gurado Dashboard WebConnect editor: selected voucher articles and display settings
+    :width: 100%
+
+    Step 2: Select articles or categories and adjust additional display settings.
+
+Step 3: Select the integration method
+-------------------------------------
+
+**The integration method is the final step**, after the widget has been
+configured. Choose **TYPO3 extension** for this integration. The same screen
+also offers other integration methods for different website platforms.
+
+..  figure:: ../Images/dashboard-webconnect-step3-integration.png
+    :alt: gurado Dashboard WebConnect integration method selection including TYPO3 extension
+    :width: 100%
+
+    Step 3: Choose TYPO3 extension to integrate the configured shop.
+
+The TYPO3 extension embeds the configured WebConnect shop; styling and article
+configuration are managed in the gurado Dashboard. Continue below to
+configure the Storecode and mode in TYPO3.
+
 Terminology
 ===========
 
