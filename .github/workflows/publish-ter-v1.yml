@@ -40,4 +40,4 @@ jobs:
         env:
           TYPO3_API_TOKEN: ${{ secrets.TYPO3_API_TOKEN }}
         run: |
-          "$HOME/.config/composer/vendor/bin/tailor" ter:publish 1.0.0 gurado_webconnect --comment="Initial stable release of gurado WebConnect for TYPO3"
+          "$(composer global config bin-dir --absolute)/tailor" ter:publish 1.0.0 gurado_webconnect --comment="Initial stable release of gurado WebConnect for TYPO3"
