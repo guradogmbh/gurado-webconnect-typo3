@@ -38,7 +38,9 @@ Enable the **gurado WebConnect** site set in TYPO3 site management. In Site Sett
 
 ## Full documentation
 
-Start with [the complete installation and user guide](Documentation/Index.rst), including free and paid plans, supported views, in-store redemption, accounting reports and troubleshooting.
+Read the [complete installation and user guide](Documentation/Index.rst), including free and paid plans, supported views, in-store redemption, accounting reports and troubleshooting.
+
+The manual is also prepared for publication on [docs.typo3.org](https://docs.typo3.org/p/gurado/typo3-webconnect/main/en-us/) once the TYPO3 Documentation Team has approved the GitHub webhook.
 
 ## Support
 
