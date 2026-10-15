@@ -60,4 +60,6 @@ a gurado voucher shop into their TYPO3 website.
 
 `Create your free gurado account <https://dashboard.gurado.de/register>`_ to get started.
 
-Visit https://www.gurado.de or https://support.gurado.de for more information.
+For questions, email **support@gurado.de** or use the support chat on
+`www.gurado.de <https://www.gurado.de/>`_. Additional help is available
+at https://support.gurado.de.
