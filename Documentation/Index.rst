@@ -9,6 +9,8 @@ gurado WebConnect for TYPO3
     :width: 270px
 
 Sell gift vouchers directly from your TYPO3 website using gurado WebConnect.
+
+This guide covers installation, configuration, online sales, and voucher redemption.
 gurado manages voucher issuance, redemption, outstanding values and
 transaction reporting independently of TYPO3.
 
