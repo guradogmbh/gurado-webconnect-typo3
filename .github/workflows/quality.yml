@@ -63,6 +63,8 @@ jobs:
           tools: composer:v2
           extensions: intl, mbstring, pdo_sqlite, xml, zip
           coverage: none
+      - name: Allow the official TYPO3 Composer class alias plugin
+        run: composer config --no-plugins allow-plugins.typo3/class-alias-loader true
       - name: Verify TYPO3 dependencies resolve
         run: |
           composer require --no-update --no-interaction "typo3/cms-core:^${{ matrix.typo3 }}" "typo3/cms-fluid-styled-content:^${{ matrix.typo3 }}"
