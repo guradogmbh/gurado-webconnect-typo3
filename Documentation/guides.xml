@@ -3,6 +3,7 @@
         links-are-relative="true"
         default-code-language="bash">
     <extension class="\T3Docs\Typo3DocsTheme\DependencyInjection\Typo3DocsThemeExtension"
+               interlink-shortcode="gurado/typo3-webconnect"
                project-home="https://www.gurado.de"
                project-repository="https://github.com/guradogmbh/gurado-webconnect-typo3"
                project-issues="https://github.com/guradogmbh/gurado-webconnect-typo3/issues"
