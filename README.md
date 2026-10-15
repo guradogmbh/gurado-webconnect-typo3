@@ -15,9 +15,17 @@ gurado is a cloud-based voucher management platform covering online sales, in-st
 
 **[Sign up for a free gurado account](https://dashboard.gurado.de/register)** to create and configure your voucher shop. You will need its **Storecode** to connect WebConnect to TYPO3. Both the gurado Free plan and the TYPO3 WebConnect extension can be used without a paid subscription. The Free plan allows up to 10 voucher redemptions in a 30-day period.
 
-## Installation (GitHub development branch)
+## Installation
 
-The extension is currently under development and has been tested by the project on TYPO3 14.3.6. Test changes on staging before production.
+**After the v1.0.0 release is published on Packagist**, the regular installation command will be:
+
+```bash
+composer require gurado/typo3-webconnect
+```
+
+### Development branch (before public release)
+
+The release candidate has been tested in a TYPO3 14.3.9 installation. TYPO3 13.4 dependency resolution has also passed CI; a full TYPO3 13.4 functional installation test is still recommended. Until the stable tag is published, use the development-branch installation below.
 
 ```bash
 composer config repositories.gurado-webconnect vcs https://github.com/guradogmbh/gurado-webconnect-typo3.git
@@ -39,4 +47,4 @@ Questions about gurado or the WebConnect extension? **Email [support@gurado.de](
 - [gurado support information](https://support.gurado.de)
 - [Report a technical extension issue on GitHub](https://github.com/guradogmbh/gurado-webconnect-typo3/issues)
 
-**Release status:** Development; not yet published in TYPO3 Extension Repository. Do not disable Composer security advisory protections to force package installation.
+**Release status:** 1.0.0 release candidate; not yet published in TYPO3 Extension Repository. Do not disable Composer security advisory protections to force package installation.
