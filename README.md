@@ -34,8 +34,9 @@ Start with [the complete installation and user guide](Documentation/Index.rst), 
 
 ## Support
 
-- [gurado website](https://www.gurado.de)
-- [gurado support](https://support.gurado.de)
-- [Extension issues](https://github.com/guradogmbh/gurado-webconnect-typo3/issues)
+Questions about gurado or the WebConnect extension? **Email [support@gurado.de](mailto:support@gurado.de)** or contact us directly through the **support chat on [www.gurado.de](https://www.gurado.de/)**.
+
+- [gurado support information](https://support.gurado.de)
+- [Report a technical extension issue on GitHub](https://github.com/guradogmbh/gurado-webconnect-typo3/issues)
 
 **Release status:** Development; not yet published in TYPO3 Extension Repository. Do not disable Composer security advisory protections to force package installation.
