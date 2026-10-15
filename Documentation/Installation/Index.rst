@@ -47,4 +47,4 @@ For non-Composer TYPO3 installations, the extension may be installed as
 a local extension after extracting a compatible release package; enable
 it and apply any database schema updates in the TYPO3 backend.
 
-Next, follow :ref:`configuration` for Bubble and Embed options.
+Next, follow :ref:`configuration` to configure WebConnect in the gurado Dashboard in three steps (design, articles, integration type), then set the Storecode and Bubble/Embed options in TYPO3.
