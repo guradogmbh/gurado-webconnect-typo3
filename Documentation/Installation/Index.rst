@@ -16,9 +16,9 @@ Create your gurado account
 
 If you do not already have a gurado account, `register for free <https://dashboard.gurado.de/register>`_.
 Create and configure your voucher shop in the gurado Dashboard and obtain its
-**Storecode** before connecting it to TYPO3. Registration for the gurado Free
-plan does not require a paid subscription. TYPO3 integration availability
-may depend on the selected gurado plan.
+**Storecode** before connecting it to TYPO3. Both gurado's Free plan and the TYPO3 WebConnect integration are free to use;
+no paid subscription is required. The Free plan includes up to 10 voucher
+redemptions in a 30-day period.
 
 Composer installation from GitHub (development)
 ==============================================
