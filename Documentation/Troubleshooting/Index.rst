@@ -42,6 +42,11 @@ Check project constraints and run a dry-run update of compatible TYPO3 packages.
 Support
 =======
 
-Documentation and user support: https://support.gurado.de
-Issues with the TYPO3 extension:
-https://github.com/guradogmbh/gurado-webconnect-typo3/issues
+For questions about the gurado platform or WebConnect integration, contact
+**support@gurado.de** or use the **support chat on**
+`www.gurado.de <https://www.gurado.de/>`_.
+
+Additional help is available at https://support.gurado.de.
+
+To report a technical issue with the TYPO3 extension, use
+https://github.com/guradogmbh/gurado-webconnect-typo3/issues.
