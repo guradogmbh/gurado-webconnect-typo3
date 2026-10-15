@@ -57,3 +57,10 @@ a local extension after extracting a compatible release package; enable
 it and apply any database schema updates in the TYPO3 backend.
 
 Next, follow :ref:`configuration` to configure WebConnect in the gurado Dashboard in three steps (design, articles, integration type), then set the Storecode and Bubble/Embed options in TYPO3.
+
+Need help?
+==========
+
+If you have questions about the installation or configuration, email
+**support@gurado.de** or use the **support chat on**
+`www.gurado.de <https://www.gurado.de/>`_.
