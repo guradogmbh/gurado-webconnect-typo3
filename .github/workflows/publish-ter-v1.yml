@@ -1,0 +1,43 @@
+name: Publish gurado WebConnect 1.0.0 to TER
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-ter-v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish-ter:
+    name: Publish v1.0.0 to TYPO3 Extension Repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the exact v1.0.0 release
+        uses: actions/checkout@v4
+        with:
+          ref: v1.0.0
+          persist-credentials: false
+      - name: Setup PHP and Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer:v2
+          coverage: none
+      - name: Verify metadata and availability of TER token
+        env:
+          TYPO3_API_TOKEN: ${{ secrets.TYPO3_API_TOKEN }}
+        shell: bash
+        run: |
+          test -n "$TYPO3_API_TOKEN" || { echo "TYPO3_API_TOKEN is not configured"; exit 1; }
+          php -r '$c=json_decode(file_get_contents("composer.json"),true); if (($c["extra"]["typo3/cms"]["version"] ?? "") !== "1.0.0" || ($c["extra"]["typo3/cms"]["extension-key"] ?? "") !== "gurado_webconnect") exit(1);'
+          php -r '$c=file_get_contents("ext_emconf.php"); if (!str_contains($c, "\x27version\x27 => \x271.0.0\x27")) exit(1);'
+      - name: Install official TYPO3 Tailor publishing tool
+        run: composer global require --no-interaction --prefer-dist typo3/tailor
+      - name: Publish release to TER
+        env:
+          TYPO3_API_TOKEN: ${{ secrets.TYPO3_API_TOKEN }}
+        run: |
+          "$HOME/.config/composer/vendor/bin/tailor" ter:publish 1.0.0 gurado_webconnect --comment="Initial stable release of gurado WebConnect for TYPO3"
