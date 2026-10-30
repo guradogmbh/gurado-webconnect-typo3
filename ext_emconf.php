@@ -1,7 +1,7 @@
 <?php
 $EM_CONF[$_EXTKEY] = [
     'title' => 'gurado WebConnect',
-    'description' => 'Embed the gurado gift voucher shop in TYPO3.',
+    'description' => 'Sell gift cards, gift vouchers and gift certificates through TYPO3 with gurado WebConnect.',
     'category' => 'plugin',
     'author' => 'gurado GmbH',
     'author_email' => 'info@gurado.de',
