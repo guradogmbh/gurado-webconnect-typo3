@@ -4,8 +4,9 @@
 About gurado
 ==================
 
-gurado is a cloud-based gift voucher management solution for businesses
-selling and redeeming gift vouchers online and at physical locations.
+gurado is a cloud-based gift card and gift voucher management solution for
+businesses selling and redeeming digital gift certificates and vouchers
+online and at physical locations.
 
 The TYPO3 extension connects your website to an existing gurado voucher
 shop using a **Storecode**. TYPO3 does not need its own voucher database,

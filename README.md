@@ -2,7 +2,7 @@
 
 ![Official gurado logo](Documentation/Images/gurado-logo.svg)
 
-**Sell gift vouchers from your TYPO3 website with gurado — no paid subscription required to get started.**
+**Sell gift cards, gift vouchers and gift certificates from your TYPO3 website with gurado — no paid subscription required to get started.**
 
 gurado is a cloud-based voucher management platform covering online sales, in-store redemption, and reporting for finance and accounting teams. WebConnect embeds your gurado voucher shop into TYPO3 without rebuilding the voucher checkout.
 

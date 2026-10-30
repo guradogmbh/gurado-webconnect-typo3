@@ -1,6 +1,6 @@
 {
   "name": "gurado/typo3-webconnect",
-  "description": "gurado WebConnect - Embed the gurado gift voucher shop in TYPO3.",
+  "description": "gurado WebConnect - Sell gift cards, gift vouchers and gift certificates on TYPO3.",
   "type": "typo3-cms-extension",
   "license": "GPL-2.0-or-later",
   "require": {

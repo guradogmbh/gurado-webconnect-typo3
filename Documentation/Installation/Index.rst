@@ -8,7 +8,8 @@ Requirements
 ============
 
 * TYPO3 13.4 or TYPO3 14 (current integration tested by the project on TYPO3 14.3.6).
-* A gurado account and an activated voucher shop with a **Storecode**.
+* A gurado account and an activated gift card, gift voucher or gift certificate
+  shop with a **Storecode**.
 * The **fluid_styled_content** system extension and an active site configuration.
 
 Create your gurado account
