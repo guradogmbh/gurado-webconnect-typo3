@@ -1,0 +1,29 @@
+name: Publish v1.0.1
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-v1.0.1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create GitHub release if it does not exist
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if gh release view v1.0.1 >/dev/null 2>&1; then
+            echo "Release v1.0.1 already exists; no changes made."
+            exit 0
+          fi
+          gh release create v1.0.1 \
+            --target "${GITHUB_SHA}" \
+            --title "gurado WebConnect 1.0.1" \
+            --notes "Documentation and metadata update: add gift card, gift voucher and gift certificate terminology for international discoverability. No runtime changes."
