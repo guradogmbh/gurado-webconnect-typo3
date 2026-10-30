@@ -1,0 +1,32 @@
+name: Attach TER package v1.0.1
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/package-ter-v1.0.1.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v1.0.1
+          persist-credentials: false
+      - name: Create TYPO3 Extension Repository ZIP
+        run: |
+          test -f composer.json
+          test -f ext_emconf.php
+          grep -q "'version' => '1.0.1'" ext_emconf.php
+          grep -q '"version": "1.0.1"' composer.json
+          zip -q -r /tmp/gurado_webconnect_1.0.1.zip . -x '.git/*' '.github/*' '.gitignore' '.gitattributes'
+          unzip -l /tmp/gurado_webconnect_1.0.1.zip | head -30
+      - name: Attach ZIP to existing GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh release upload v1.0.1 /tmp/gurado_webconnect_1.0.1.zip --clobber
