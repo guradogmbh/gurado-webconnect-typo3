@@ -7,7 +7,8 @@ Redemption, reports and finance
 Redemption in-store
 ===================
 
-After vouchers are sold online, the same vouchers are managed in gurado.
+Gift vouchers, gift cards and digital gift certificates sold online are
+managed in gurado.
 Businesses can redeem them in-store with the gurado webapp or supported
 iOS/Android apps; compatible POS integrations are available depending
 on the customer's configuration.
